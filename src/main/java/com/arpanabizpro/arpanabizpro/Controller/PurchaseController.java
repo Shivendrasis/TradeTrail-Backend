@@ -30,7 +30,7 @@ public class PurchaseController {
         return new ResponseEntity<>(purchaseService.getAllPurchases(),HttpStatus.OK);
     }
 
-    //delete by itemcode
+    //delete by itemCode
     //TODO: Not working properly
     @DeleteMapping("/delete/{itemCode}")
     public ResponseEntity<String> deleteByItemCode(String itemCode){

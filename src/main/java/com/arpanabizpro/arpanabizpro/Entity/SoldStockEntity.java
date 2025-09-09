@@ -16,7 +16,8 @@ import java.time.LocalDate;
 public class SoldStockEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "global_seq")
+    @SequenceGenerator(name = "global_seq", sequenceName = "global_sequence", allocationSize = 1)
     private Long id;
 
     @NotBlank(message = "Item code is required")

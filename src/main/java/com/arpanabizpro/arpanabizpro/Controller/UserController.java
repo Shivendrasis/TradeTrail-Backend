@@ -14,10 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/auth")
 public class UserController {
 
-
     @Autowired
     private UserService userService;
-
 
     //for user register
     @PostMapping("/register")

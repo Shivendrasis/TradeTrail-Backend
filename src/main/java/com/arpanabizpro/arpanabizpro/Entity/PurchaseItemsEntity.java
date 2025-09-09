@@ -10,7 +10,8 @@ import lombok.Data;
 public class PurchaseItemsEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "global_seq")
+    @SequenceGenerator(name = "global_seq", sequenceName = "global_sequence", allocationSize = 1)
     private Long id;
 
     private String company;

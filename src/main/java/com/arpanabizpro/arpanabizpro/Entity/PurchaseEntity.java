@@ -4,7 +4,6 @@ package com.arpanabizpro.arpanabizpro.Entity;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.List;
 
 
@@ -15,7 +14,8 @@ public class PurchaseEntity {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "global_seq")
+    @SequenceGenerator(name = "global_seq", sequenceName = "global_sequence", allocationSize = 1)
     private Long id;
 
     //Supplier details
